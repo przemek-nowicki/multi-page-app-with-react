@@ -1,0 +1,33 @@
+{
+  "name": "multi-page-app-with-react",
+  "version": "1.0.0",
+  "description": "Multi Page Application with React",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/przemek-nowicki/multi-page-app-with-react.git"
+  },
+  "author": "Przemek Nowicki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/przemek-nowicki/multi-page-app-with-react/issues"
+  },
+  "homepage": "https://github.com/przemek-nowicki/multi-page-app-with-react#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.0"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
