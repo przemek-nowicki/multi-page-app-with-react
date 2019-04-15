@@ -24,10 +24,26 @@ const entry = getFilesFromDir(PAGE_DIR, [".js"]).reduce( (obj, filePath) => {
 module.exports = {
   entry: entry,
   output: {
-    path: path.join(__dirname, "dist"),
+    path: path.join(__dirname, "build"),
     filename: "[name].js"
   },
   plugins: [
       ...htmlPlugins
-  ]
+  ],
+  module: {
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: {
+					loader:"babel-loader",
+					options:{
+						presets: [
+							"@babel/preset-env",
+							"@babel/preset-react"
+						], 
+					}
+				},
+      }]
+    }
 };
