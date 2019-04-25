@@ -29,6 +29,12 @@ module.exports = {
   plugins: [
     ...htmlPlugins
   ],
+  resolve:{
+		alias:{
+			src: path.resolve(__dirname, "src"),
+			components: path.resolve(__dirname, "src", "components")
+		}
+	},
   module: {
 		rules: [
 			{
