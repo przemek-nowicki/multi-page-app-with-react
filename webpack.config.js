@@ -24,7 +24,7 @@ module.exports = {
   entry: entry,
   output: {
     path: path.join(__dirname, "build"),
-    filename: "[name].[chunkhash:4].js"
+    filename: "[name].[hash:4].js"
   },
   plugins: [
     ...htmlPlugins

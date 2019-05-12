@@ -1,9 +1,11 @@
 # Multi Page App With React
 
 A lightweight, flexible webpack setup with React for multi page application development. <br />
-It uses preconfiguration based on the corresponding file names to generate static pages.
+It uses preconfiguration based on the corresponding file names to generate static pages.<br />
 
-Here's a code sample to illustrate this concept for an example static page with some React componenets:
+A write up of this setup can be found on this [Medium post](https://itnext.io/building-multi-page-application-with-react-f5a338489694).
+
+Here's a code sample to illustrate this concept for an example static page with few React componenets:
 ![picture alt](http://assets.miwu.pl/mpa-with-react-example.png "MPA with React example")
 
 ## Quick Start
