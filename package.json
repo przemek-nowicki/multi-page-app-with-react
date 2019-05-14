@@ -4,8 +4,8 @@
   "description": "Multi Page Application with React",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
     "lint": "eslint --ext .jsx,.js src",
+    "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development --hot --open --port 3100"
   },
   "repository": {
@@ -36,6 +36,7 @@
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
+    "eslint-import-resolver-alias": "^1.1.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }
