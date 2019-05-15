@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const getFilesFromDir = require("./config/files");
 const PAGE_DIR = path.join("src", "pages", path.sep);
 
@@ -26,6 +27,7 @@ module.exports = {
     path: path.join(__dirname, "build"),
     filename: "[name].[hash:4].js"
   },
+  devtool: 'source-map',
   plugins: [
     ...htmlPlugins
   ],
@@ -57,6 +59,7 @@ module.exports = {
 			}]
     },
     optimization: {
+      minimizer: [new UglifyJsPlugin({cache: true, sourceMap: false})],
       splitChunks: {
         cacheGroups: {
           vendor: {
