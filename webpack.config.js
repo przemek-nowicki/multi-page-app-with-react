@@ -55,7 +55,25 @@ module.exports = (env, argv) => ({
 				test: /\.css$/,
 				use: ["style-loader", {loader: "css-loader", options: {modules: true}}],
 				exclude: /node_modules/,
-			}]
+      },
+      {
+        test: /\.(svg|jpg|gif|png)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: (url, resourcePath, context) => {
+                if(argv.mode === 'development') {
+                  const relativePath = path.relative(context, resourcePath);
+                  return '/' + relativePath;
+                }
+                return '/assets/images';
+              }
+            }
+          }
+        ]
+      }]
     },
     optimization: {
       minimize: argv.mode === 'production' ? true : false,
