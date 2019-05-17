@@ -1,12 +1,20 @@
 # Multi Page App With React
 
-A lightweight, flexible webpack setup with React for multi page application development. <br />
-It uses preconfiguration based on the corresponding file names to generate static pages.<br />
+A lightweight, flexible Webpack setup with React for multi page application development. <br />
+You should consider this setup when you want to use React for some sections of your page, but you don't want to make it single page application (SPA) with only a `<div id="app">` in the body tag.
 
-A write up of this setup can be found on this [Medium post](https://itnext.io/building-multi-page-application-with-react-f5a338489694).
-
-Here's a code sample to illustrate this concept for an example static page with few React componenets:
+Here's a code sample to illustrate this concept for an example static page with several React components:
 ![picture alt](http://assets.miwu.pl/mpa-with-react-example.png "MPA with React example")
+
+A  basic write up of this setup can be found on this [Medium post](https://itnext.io/building-multi-page-application-with-react-f5a338489694).
+
+**Notice:** the latest code base includes the following updates: 
+- webpack bundles with hashed filenames
+- code linter (with Airbnb style guide)
+- enabled CSS modules (added example css styles)
+- minimize webpack bundles with TerserPlugin (i.e. js code minification)
+- file loader to resolve imports on images (added example product image)
+
 
 ## Quick Start
 
@@ -31,3 +39,11 @@ $ npm run build
 ```
 
 ***build** script runs in production mode to improve load time (i.e. minified bundles, lighter weight source maps etc)*
+
+**linting**
+
+```
+$ npm run lint
+```
+
+***lint** script runs linter to check for lint errors in src directory*
