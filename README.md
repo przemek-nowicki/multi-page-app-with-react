@@ -1,7 +1,8 @@
-# Multi Page App With React
+# Multi Page App with React
 
 A lightweight, flexible Webpack setup with React for multi page application development. <br />
-You should consider this setup when you want to use React for some sections of your page, but you don't want to make it single page application (SPA) with only a `<div id="app">` in the body tag.
+
+You should consider this setup when you want to use React for some sections of your page(s), but you don't want to make it Single Page Application (SPA) with only a `<div id="app">` in the body tag.
 
 Here's a code sample to illustrate this concept for an example static page with several React components:
 ![picture alt](http://assets.miwu.pl/mpa-with-react-example.png "MPA with React example")

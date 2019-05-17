@@ -1,4 +1,10 @@
+ @font-face {
+   font-family: 'MenuFont';
+   src:  url('./OpenSans-Regular.woff') format('woff'),
+}
+
 .Menu {
     color: #808080;
-    list-style-type:square;
+    font-family: 'MenuFont';
+    list-style-type: square;
 }
