@@ -66,9 +66,9 @@ module.exports = (env, argv) => ({
               outputPath: (url, resourcePath, context) => {
                 if(argv.mode === 'development') {
                   const relativePath = path.relative(context, resourcePath);
-                  return '/' + relativePath;
+                  return `/${relativePath}`;
                 }
-                return '/assets/images';
+                return `/assets/images/${path.basename(resourcePath)}`;
               }
             }
           }
@@ -76,7 +76,20 @@ module.exports = (env, argv) => ({
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-         use: ['file-loader']
+        use: [
+          {
+            loader: 'file-loader', 
+            options: {
+              outputPath: (url, resourcePath, context) => {
+                if(argv.mode === 'development') {
+                  const relativePath = path.relative(context, resourcePath);
+                  return `/${relativePath}`;
+                }
+                return `/assets/fonts/${path.basename(resourcePath)}`;
+              }
+            }
+          }
+        ]
       }]
     },
     optimization: {

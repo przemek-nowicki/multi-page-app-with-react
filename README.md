@@ -14,7 +14,7 @@ A  basic write up of this setup can be found on this [Medium post](https://itnex
 - code linter (with Airbnb style guide)
 - enabled CSS modules (added example css styles)
 - minimize webpack bundles with TerserPlugin (i.e. js code minification)
-- file loader to resolve imports on images (added example product image)
+- file loader to resolve imports on fonts and images (added example product image)
 
 
 ## Quick Start

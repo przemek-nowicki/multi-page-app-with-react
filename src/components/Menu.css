@@ -1,6 +1,6 @@
  @font-face {
    font-family: 'MenuFont';
-   src:  url('./OpenSans-Regular.woff') format('woff'),
+   src:  url('./OpenSans-Regular.woff') format('woff');
 }
 
 .Menu {
