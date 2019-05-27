@@ -12,6 +12,12 @@
     "type": "git",
     "url": "git+https://github.com/przemek-nowicki/multi-page-app-with-react.git"
   },
+  "keywords": [
+    "react mpa",
+    "webpack4 multi-pages",
+    "react multi-page-app",
+    "react multi page application"
+  ],
   "author": "Przemek Nowicki",
   "license": "ISC",
   "bugs": {
